@@ -47,7 +47,6 @@ void bubbleSort(struct array array){
        
         --i;
     }
-    printf("\n");
     for(int b = 0; b < ARRAYSIZE - 1;++b){
         printf("%d: %d\n",array.numbersArray[b],array.swapArray[b]);
     }
@@ -97,8 +96,6 @@ void selectionSort(struct array array){
         ++baseIndex;
         --i;
     }
-
-    printf("\n");
     for(int b = 0; b < ARRAYSIZE - 1;++b){
         printf("%d: %d\n",array.numbersArray[b],array.swapArray[b]);
     }
@@ -126,10 +123,17 @@ int main(){
     array1.totalNumOfSwaps = 0;
     array2.totalNumOfSwaps = 0;
 
+    printf("\nArray 1 Bubble sort:\n");
     bubbleSort(array1);
+
+    printf("\nArray 2 Bubble sort:\n");
     bubbleSort(array2);
 
+
+    printf("\nArray 1 Selection sort:\n");
     selectionSort(array1);
+
+    printf("\nArray 2 Selection sort:\n");
     selectionSort(array2);
 
 
